@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GÜNDEMIX</title>
+<style>
+body{
+    margin:0;
+    font-family: Georgia, "Times New Roman", serif;
+    background:white;
+}
+
+/* ÜST ALAN */
+header{
+    background:#b30000;
+    color:white;
+    padding:15px 0;
+    text-align:center;
+}
+
+header h1{
+    margin:0;
+    font-size:36px;
+    letter-spacing:2px;
+}
+
+nav{
+    margin-top:10px;
+}
+
+nav a{
+    color:white;
+    margin:0 15px;
+    text-decoration:none;
+    font-size:18px;
+    font-weight:bold;
+}
+
+/* SLIDER */
+.slider{
+    width:600px;
+    height:337px;
+    margin:30px auto;
+    position:relative;
+    overflow:hidden;
+    border:2px solid #b30000;
+    background:black;
+}
+
+.slide{
+    position:absolute;
+    width:100%;
+    height:100%;
+    display:none;
+}
+
+.slide.active{
+    display:block;
+}
+
+.slide img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.caption{
+    position:absolute;
+    bottom:0;
+    width:100%;
+    background:rgba(179,0,0,0.9);
+    color:white;
+    text-align:center;
+    padding:8px;
+}
+
+/* OKLAR */
+.prev, .next{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    color:white;
+    font-size:35px;
+    cursor:pointer;
+    padding:10px;
+    background:rgba(0,0,0,0.5);
+}
+
+.prev{ left:10px; }
+.next{ right:10px; }
+
+/* HABER ALANI */
+.haberler{
+    width:90%;
+    margin:40px auto;
+    display:flex;
+    flex-wrap:wrap;
+    gap:20px;
+}
+
+.haber{
+    width:30%;
+    border:1px solid #ddd;
+}
+
+.haber img{
+    width:100%;
+    height:170px;
+    object-fit:cover;
+}
+
+.haber h3{
+    margin:10px;
+    font-size:18px;
+    color:#b30000;
+}
+
+.haber p{
+    margin:10px;
+    font-size:14px;
+}
+
+.haber a{
+    text-decoration:none;
+    color:black;
+}
+</style>
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+
+<header>
+    
+    <h1>GÜNDEMİX</h1>
+    
+    <nav>
+  <a href="spor.html">Spor</a>
+  <a href="siyaset.html">Siyaset</a>
+  <a href="magazin.html">Magazin</a>
+  <div class="btn-group">
+    <button type="button" class="btn btn-danger">İletişim</button>
+    <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="caret"></span><span class="sr-only">Toggle Dropdown</span></button>
+    <ul class="dropdown-menu">
+      
+      <li role="presentation"><a href="http://www.facebook.com">Facebook</a></li>
+      <li role="presentation" class="disabled"><a href="http://www.twitter.com">Twitter</a></li>
+      
+    </ul>
+  </div>
+
+
+</nav>
+
+</header>
+
+
+<div class="slider">
+
+  <a href="spor.html" class="slide active">
+        <img src="osi.jpg">
+  <div class="caption">Devler liginde Osimhen rüzgarı</div>
+  </a>
+
+    <a href="spor.html" class="slide">
+        <img src="images (1).jpg" width="300" height="168" alt=""/>
+        <div class="caption">Türkiye kupasında büyük heyecan</div>
+    </a>
+
+    <a href="siyaset.html" class="slide">
+        <img src="putin.jpg">
+        <div class="caption">Putin'den Avrupa'ya tehdit! 'Çaldıklarını verecekler</div>
+    </a>
+
+    <a href="siyaset.html" class="slide">
+        <img src="barzani1-1024x576.png" width="1024" height="576" alt=""/>
+<div class="caption">Barzani’den Bahçeli’ye yanıt: O hala eski bozkurt, sadece şimdi koyun postuna bürünmüş</div>
+    </a>
+
+    <a href="magazin.html" class="slide">
+        <img src="indir.jpg" width="300" height="168" alt=""/>
+<div class="caption">Ünlülere yönelik uyuşturucu operasyonu: Gözaltılar, yakalama kararları ve masumiyet tartışması</div>
+    </a>
+
+    <a href="magazin.html" class="slide">
+        <img src="images.jpg" width="293" height="172" alt=""/>
+<div class="caption">Engin Polat ve Dilan Polat boşanıyor mu? 'Beni evden kovdu'</div>
+    </a>
+
+    <span class="prev" onclick="degistir(-1)">&#10094;</span>
+    <span class="next" onclick="degistir(1)">&#10095;</span>
+
+</div>
+
+
+<div class="haberler">
+
+    
+  <a href="spor.html" class="haber">
+  <img src="indir (2).jpg" width="303" height="166" alt=""/>
+<h3>Galatasaray Daikin, CEV Kupasında 8'li Finaller Turuna Yükseldi</h3>
+  <p>Temsilcimiz Galatasaray Daikin, 2026 CEV Kupası'nda 8'li Finaller Turu'na yükseldi.
+
+Sarı-kırmızılılar, ilk maçta 3-1 mağlup ettiği Portekiz'in FC Porto takımını, CEV Kupası 16'lı Finaller Turu ikinci maçında sahasında 3-0 (25-17, 25-17, 25-17) mağlup ederek adını bir üst tura yazdırdı.</p>
+  </a>
+
+    <a href="spor.html" class="haber">
+        <img src="indir (1).jpg" width="299" height="168" alt=""/>
+<h3>Fenerbahçe’nin Sörloth transferi için belirlediği bonservis ortaya çıktı!</h3>
+        <p>Fenerbahçe’nin kış transfer sezonunda mutlak kadrosuna katmak istediği Sörloth ile ilgili son karar çıktı.
+
+İspanyol basınında yer alan habere göre Fenerbahçe,  yıldız golcü için Atletico’ya önereceği bonservis miktarını belirledi.
+   Fenerbahçe, Sörloth için 25-30 milyon euro bandında bir bonservis bedelini gözden çıkarmış durumda. Bu rakam, Atletico Madrid’in yaptığı yatırımın önemli bir bölümünü geri kazanmasını sağlarken, aynı zamanda maaş bütçesinde de rahatlama yaratacak.</p>
+    </a>
+
+    <a href="spor.html" class="haber">
+        <img src="indir (3).jpg" width="300" height="168" alt=""/>
+<h3>Trabzonspor deplasmanda rahat kazandı</h3>
+        <p>Türkiye Sigorta Basketbol Süper Ligi'nde 7. hafta heyecanı sürerken Trabzonspor önemli bir deplasman galibiyetine imza attı. Bordo-mavili ekip, Manisa'da oynanan karşılaşmada Manisa Basket'i 93-82 mağlup ederek sezonun 4. galibiyetini elde etti.
+
+Maça etkili başlayan Trabzonspor, hücumda yüksek yüzdeyle oynayarak ilk yarıyı önde tamamladı. İkinci yarıda da üstünlüğünü koruyan Karadeniz ekibi, son bölümde farkı çift hanelerde tutmayı başardı.</p>
+  </a>
+
+    
+    <a href="siyaset.html" class="haber">
+        <img src="images (2).jpg" width="339" height="149" alt=""/>
+<h3>Anahtar Parti, 100 bin üye sayısını geçti</h3>
+        <p>Anahtar Parti yönetimi, 100 bin 211 onaylı üye sayısına ulaşılmasının parti politikalarına duyulan ilgi, sahadaki çalışmalar ve teşkilatların aktif performansının bir yansıması olduğunu belirtirken, önümüzdeki dönemde bu ivmenin artarak devam edeceğini ifade etti.
+
+Anahtar Parti Genel Başkanı Yavuz Ağıralioğlu da partiye katılım gösteren üyelere ve sahada emek veren teşkilatlara teşekkür etti. Ağıralioğlu, yaptığı değerlendirmede, "Bu yürüyüş sayılara değil, inanca dayanıyor. Anahtar Parti, milletin umudunu taşıyan bir iradenin adıdır. Bu güvene layık olacak, Türkiye’nin yarınlarını cesaretle ve adaletle kuracağız" ifadelerini kullandı.</p>
+    </a>
+
+    <a href="siyaset.html" class="haber">
+        <img src="indir (4).jpg" width="300" height="168" alt=""/>
+<h3>AK Parti Sözcüsü Çelik: "Avustralya'daki terör saldırısını lanetliyoruz"</h3>
+        <p>AK Parti Sözcüsü Çelik, sosyal medya hesabından yaptığı paylaşımda, "Avustralya’nın Sidney şehrindeki Hanuka kutlamaları esnasında gerçekleşen terör saldırısını lanetliyoruz. Avustralya halkına ve hayatını kaybedenlerin ailelerine başsağlığı diliyoruz. Terörün her türlüsüne karşıyız. Terörle mücadelede dayanışmamızı bir kere daha ifade ediyoruz" ifadelerini kullandı.</p>
+    </a>
+
+    <a href="siyaset.html" class="haber">
+        <img src="indir (5).jpg" width="292" height="172" alt=""/>
+<h3>Zafer Partisi Genel Başkanı Ümit Özdağ'a beraat kararı</h3>
+        <p>Zafer Partisi Genel Başkanı Ümit Özdağ, 19 Ocak'ta Antalya'da partisinin il başkanları istişare toplantısında Cumhurbaşkanı Recep Tayyip Erdoğan'a hakaret ettiği iddiasıyla 1 yıl 2 aydan 4 yıl 8 aya kadar hapis istemiyle yargılandığı davada üçüncü kez hakim karşısına çıktı.Çağlayan'daki İstanbul Adalet Sarayı 35. Asliye Ceza Mahkemesi'nde görülen duruşmaya Ümit Özdağ ve avukatları katıldı. Geçtiğimiz duruşmada esasa ilişkin mütalaasını açıklayan savcılık Özdağ hakkında 4 yıl 8 aya kadar hapis cezasıyla cezalandırılmasını istedi.</p>
+    </a>
+
+   
+    <a href="magazin.html" class="haber">
+        <img src="indir (6).jpg" width="300" height="168" alt=""/>
+<h3>Hülya Avşar 'Fazilet' rolü için tesettüre girdi! Sosyal medyada yorum yağdı</h3>
+        <p>Son olarak Masumiyet dizisinde 'Hale Ilgaz' karakterine hayat veren ünlü yıldız Hülya Avşar 4 yıl aradan sonra dizi setlerine geri dönüyor. Atv'nin iddialı projesi ''Aynı Yağmur Altında'' dizisi için provalara başlayan Avşar, 'Fazilet Aydan' karakteri için tesettüre girdi.
+        Uzun bir aradan sonra ekranlara dönme kararı alan ünlü isim Hülya Avşar, ATV'de yayınlanacak "Aynı Yağmur Altında" dizisiyle setlere geri döndü.Usta oyuncu, yaklaşık 4 yıllık televizyon ayrılığının ardından kamera karşısına geçti. Avşar, yeni rolü için başörtüsü taktı</p>
+    </a>
+
+    <a href="magazin.html" class="haber">
+        <img src="indir (7).jpg" width="303" height="166" alt=""/>
+<h3>İbrahim Tatlıses'in acı günü! Aldığı haberle yıkıldı</h3>
+        <p>Son dönemde çocukları ve kardeşiyle yaşadığı sorunlarla adından söz ettiren türkücü İbrahim Tatlıses, son olarak paylaştığı üzücü bir haberle gündeme geldi.
+        İbrahim Tatlıses, geçtiğimiz günlerde büyük torunu Mert'in, Sarıyer'deki dairesini rızası dışında altı yıldır haksız şekilde işgal ettiği iddiasıyla yasal yollara başvurmuştu. Mahkeme, iki yıldır görülen davada Tatlıses'i haklı bulmuştu.</p>
+    </a>
+
+    <a href="magazin.html" class="haber">
+        <img src="indir (8).jpg" width="300" height="168" alt=""/>
+<h3>Çağla Şıkel sevenlerini korkuttu! İşte son sağlık durumu</h3>
+        <p>Ekranda ünlü ismi göremeyen sevenleri de endişelendi. Şıkel'in programının yeni bölümünün neden yayınlanmadığı ortaya çıktı. 46 yaşndaki Şıkel’in kas spazmı geçirdiği öğrenildi. 
+
+Rahatsızlığı sonrası sosyal medya hesabından ilk açıklamasını yapan Şıkel; "Ben de sizi çok seviyorum. Azıcık durmam gerekiyormuş" ifadelerini kullandı.
+
+Şıkel'in sağlık durumuyla ilgili yaptığı paylaşım sonrası takipçilerinden çok sayıda geçmiş olsun mesajı geldi.</p>
+    </a>
+
+</div>
+
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script>
+let index = 0;
+let slides = document.querySelectorAll(".slide");
+
+function degistir(y){
+    slides[index].classList.remove("active");
+    index = (index + y + slides.length) % slides.length;
+    slides[index].classList.add("active");
+}
+</script>
+</body>
+</html>

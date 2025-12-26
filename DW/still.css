@@ -1,0 +1,51 @@
+@charset "utf-8";
+#conteiner {
+	margin: auto;
+	height: auto;
+	width: 1000px;
+}
+#banner {
+	height: 200px;
+	width: 1000px;
+}
+#menu {
+	margin: 10px;
+	height: 50px;
+	width: 1000px;
+}
+#conent {
+	height: auto;
+	width: 1000px;
+}
+#footer {
+	height: 80px;
+	width: 1000px;
+}
+#conteiner #menu ul li a {
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 24px;
+	font-style: italic;
+	line-height: 50px;
+	color: #000000;
+	background-color: #F7080C;
+	text-align: center;
+	margin: 3px;
+	float: left;
+	width: 190px;
+}
+#conteiner #menu ul li {
+	list-style-type: none;
+}
+#conteiner #menu ul {
+	margin: 0px;
+	padding: 0px;
+}
+* {
+	margin: 0px;
+	padding: 0px;
+}
+#conteiner #menu div div ul li a:hover {
+	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
+	color: #FFFFFF;
+	background-color: #C8C8C8;
+}
